@@ -5,6 +5,7 @@ public class MainFrame extends JFrame{
     public static final int HEIGHT = 220;
     public static final int WIDTH = 300;
     public static final int BORDER_SIZE = 25;
+    public static final int ITEM_SIZE = 30;
 
     public MainFrame(String title){
         super();
@@ -17,26 +18,26 @@ public class MainFrame extends JFrame{
         this.setLayout(null);
 
         JLabel usernamelabel = new JLabel("Username: ");
-        usernamelabel.setBounds(this.BORDER_SIZE, this.BORDER_SIZE, 70, 30);
+        usernamelabel.setBounds(this.BORDER_SIZE, this.BORDER_SIZE, 70, ITEM_SIZE);
         this.add(usernamelabel);
 
         JTextField usernameField = new JTextField();
         usernameField.setName("username");
-        usernameField.setBounds(this.BORDER_SIZE+usernamelabel.getWidth()+5, BORDER_SIZE, 145, 30);
+        usernameField.setBounds(this.BORDER_SIZE+usernamelabel.getWidth()+5, BORDER_SIZE, 145, ITEM_SIZE);
         this.add(usernameField);
 
         JLabel passwordLabel = new JLabel("Password: ");
-        passwordLabel.setBounds(this.BORDER_SIZE, this.BORDER_SIZE+usernamelabel.getHeight()+5, 70, 30);
+        passwordLabel.setBounds(this.BORDER_SIZE, this.BORDER_SIZE+usernamelabel.getHeight()+5, 70, ITEM_SIZE);
         this.add(passwordLabel);
 
         JPasswordField passwordField = new JPasswordField();
         passwordField.setName("password");
-        passwordField.setBounds(this.BORDER_SIZE+passwordLabel.getWidth()+5, this.BORDER_SIZE+usernameField.getHeight()+5, 145, 30);
+        passwordField.setBounds(this.BORDER_SIZE+passwordLabel.getWidth()+5, this.BORDER_SIZE+usernameField.getHeight()+5, 145, ITEM_SIZE);
         this.add(passwordField);
 
         JButton loginButton = new JButton();
         loginButton.setText("login");
-        loginButton.setBounds(100, 115, 100, 30);
+        loginButton.setBounds(100, 115, 100, ITEM_SIZE);
         this.add(loginButton);
 
         this.centreFrame();
