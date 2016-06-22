@@ -1,4 +1,5 @@
 import javax.swing.*;
+import java.awt.*;
 
 public class MainFrame extends JFrame{
     public static final int HEIGHT = 220;
@@ -9,6 +10,7 @@ public class MainFrame extends JFrame{
         super();
 
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        this.setResizable(false);
 
         this.setTitle(title);
         this.setSize(this.WIDTH, this.HEIGHT);
@@ -23,6 +25,30 @@ public class MainFrame extends JFrame{
         usernameField.setBounds(this.BORDER_SIZE+usernamelabel.getWidth()+5, BORDER_SIZE, 145, 30);
         this.add(usernameField);
 
-        
+        JLabel passwordLabel = new JLabel("Password: ");
+        passwordLabel.setBounds(this.BORDER_SIZE, this.BORDER_SIZE+usernamelabel.getHeight()+5, 70, 30);
+        this.add(passwordLabel);
+
+        JPasswordField passwordField = new JPasswordField();
+        passwordField.setName("password");
+        passwordField.setBounds(this.BORDER_SIZE+passwordLabel.getWidth()+5, this.BORDER_SIZE+usernameField.getHeight()+5, 145, 30);
+        this.add(passwordField);
+
+        JButton loginButton = new JButton();
+        loginButton.setText("login");
+        loginButton.setBounds(100, 115, 100, 30);
+        this.add(loginButton);
+
+        this.centreFrame();
+        this.setVisible(true);
+    }
+
+    public void centreFrame(){
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+
+        int xPos = (dim.width/2) - (this.getSize().width/2);
+        int yPos = (dim.height/2) - (this.getSize().width/2);
+
+        this.setLocation(xPos, yPos);
     }
 }
