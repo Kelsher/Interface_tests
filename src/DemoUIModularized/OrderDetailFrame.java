@@ -1,6 +1,7 @@
 package DemoUIModularized;
 
 import javax.swing.*;
+import java.awt.*;
 
 public class OrderDetailFrame extends JFrame{
 
@@ -18,6 +19,16 @@ public class OrderDetailFrame extends JFrame{
         ciPanel.setBounds(30, 30, ciPanel.WIDTH, ciPanel.HEIGHT);
         this.add(ciPanel);
 
+        this.centreFrame();
         this.setVisible(true);
+    }
+
+    public void centreFrame(){
+        Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
+
+        int xPos = (dim.width/2) - (this.getSize().width/2);
+        int yPos = (dim.height/2) - (this.getSize().width/2);
+
+        this.setLocation(xPos, yPos);
     }
 }
