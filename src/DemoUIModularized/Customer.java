@@ -28,6 +28,10 @@ public class Customer {
         this.surname = surname;
     }
 
+    public String getFullName(){
+        return this.firstname + " " + this.surname;
+    }
+
     public Date getDateRegistered() {
         return dateRegistered;
     }

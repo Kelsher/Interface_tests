@@ -6,7 +6,7 @@ import java.awt.*;
 public class OrderDetailFrame extends JFrame{
 
 
-    private static final int WIDTH = 300;
+    private static final int WIDTH = 400;
     private static final int HEIGHT = 400;
 
     public OrderDetailFrame(Order order){
