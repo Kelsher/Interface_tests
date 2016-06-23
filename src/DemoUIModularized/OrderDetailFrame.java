@@ -19,6 +19,7 @@ public class OrderDetailFrame extends JFrame{
         ciPanel.setBounds(30, 30, ciPanel.WIDTH, ciPanel.HEIGHT);
         this.add(ciPanel);
 
+        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.centreFrame();
         this.setVisible(true);
     }
